@@ -149,7 +149,6 @@ if(verbose==TRUE){
   
 }
 
-
 # Read in data
 kasp_data <- read.table(kc_file, header=TRUE, sep="\t", na.strings=c("", "NA"), check.names=FALSE)
 keyfile <- read.table(keyfile, header=TRUE, sep="\t", na.strings=c("", "NA"), check.names=FALSE)
