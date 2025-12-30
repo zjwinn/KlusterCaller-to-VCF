@@ -150,11 +150,9 @@ if(verbose==TRUE){
 }
 
 # Read in data
+classes <- c("character", "character", "numeric", "character", "character", "character")
 kasp_data <- read.table(kc_file, header=TRUE, sep="\t", na.strings=c("", "NA"), check.names=FALSE)
-keyfile <- read.table(keyfile, header=TRUE, sep="\t", na.strings=c("", "NA"), check.names=FALSE)
-keyfile[,1:2] <- lapply(keyfile[,1:2], as.character)
-keyfile[,3] <- as.numeric(keyfile[,3])
-keyfile[,4:6] <- lapply(keyfile[,4:6], as.character)
+keyfile <- read.table(keyfile, header=TRUE, sep="\t", na.strings=c("", "NA"), check.names=FALSE, colClasses = classes)
 
 # Check for verbose
 if(verbose==TRUE){
